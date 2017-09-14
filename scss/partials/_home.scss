@@ -1,0 +1,101 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	color: $white;
+	overflow: auto;
+	overflow-x: hidden;
+	background-size: cover;
+	min-height: 100vh;
+	background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);
+	background: linear-gradient(to bottom right, #8e44ad, #c0392b) fixed;
+	max-width: 2000px;
+	margin: 0 auto;
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+
+	@keyframes aboutbg {
+		0% { opacity: 1; }
+		100% { opacity: 0; }
+	}
+
+	.icon__home path {
+		fill: $yellow;
+	}
+}
+
+.home__container {
+	display: flex;
+	flex-direction: column;
+	animation: fillin 400ms ease-in;
+	animation-fill-mode: forwards;
+
+}
+
+.hometoabout {
+  animation: aboutbg 200ms;
+}
+
+.pie {
+	align-self: center;
+	padding-top: 100px;
+	width: 140px;
+}
+
+.ibm-logo {
+	width: 42px;
+	vertical-align: middle;
+	padding-left: 4px;
+	padding-bottom: 2px;
+}
+
+#word__change {
+	color: $yellow;
+}
+
+.home__heading {
+	font-size: 1.33rem;
+	padding-top: 1rem;
+}
+
+.home__subheading {
+	font-size: .9rem;
+	padding-top: .4rem;
+}
+
+.anim {
+	background: #FEAC5E;
+	background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+	background: linear-gradient(to bottom right, #4BC0C8, #C779D0, #FEAC5E);
+	width: 3rem;
+	height: 3rem;
+	opacity: 0;
+	border-radius: 50%;
+	align-self: center;
+	position: absolute;
+	top: 49vh;
+	z-index: 9999999;
+	-webkit-backface-visibility: hidden;
+}
+
+.circle-expand {
+	animation: circleExpand 520ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes circleExpand {
+	0% { transform: scale(1); }
+	1% { opacity: 1;}
+	100% { transform: scale(40) translateZ(0); opacity: 1; }
+}
+
+@keyframes btn-hover {
+  0%   { transform: translateY(2px);  }
+  50%  { transform: translateY(-3px); }
+  100%  { transform: translateY(2px); }
+}

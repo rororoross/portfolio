@@ -1,0 +1,124 @@
+.blue-bg::-webkit-scrollbar {
+	display: none;
+}
+
+.web-work {
+	h3 {
+		display: none;
+	}
+
+	.nav__list {
+		background: linear-gradient(to bottom right, #4BC0C8, #C779D0, #FEAC5E) fixed;
+	}
+}
+
+.monitor__mac {
+	width: 275px;
+}
+
+.non-animate {
+	transform: scale(1);
+	animation: none;
+}
+
+.animation__transform {
+	transform: scale(1.2);
+}
+
+.piece__still {
+	animation: none;
+	transform: scale(1);
+}
+
+.work__container-animate {
+	animation: bye 400ms ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.web__piece {
+	padding-top: 40px;
+}
+
+.web__piece-bubble {
+	animation: fades 440ms;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.project__one {
+	animation-delay: 50ms;
+}
+
+.project__selected {
+	animation: fadeout 180ms;
+}
+
+.project__two {
+	animation-delay: 150ms;
+}
+
+.project__three {
+	animation-delay: 250ms;
+}
+
+@keyframes fadeout {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+
+@keyframes bye {
+	0% { transform: scale(1) translateY(200px); }
+	100% { transform: scale(0.22) translateY(-500px); }
+}
+
+.monitor__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 60px;
+	animation: workContainerTransformed 440ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+@keyframes monitor-move {
+	0% { transform: translateY(1400px); }
+	90% { transform: translateY(-80px); }
+	100% { transform: translateY(-60px); }
+}
+
+.web__monitor {
+	width: 70%;
+	max-width: 420px;
+	margin: 0 auto;
+	display: block;
+}
+
+.web__piece h2 {
+	font-size: 1.2rem;
+}
+
+.web-project__animate {
+	animation: anti-bubble 300ms linear;
+	animation-fill-mode: forwards;
+}
+
+.web__project-bluemix-select {
+	animation: bluemix-select 300ms linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes anti-bubble {
+	0% { transform: scale(1); }
+	100% { transform: scale(0); }
+}
+
+@keyframes bluemix-select {
+	0% { transform: scale(1); }
+	100% { transform: scale(1.33) translateY(71px); }
+}

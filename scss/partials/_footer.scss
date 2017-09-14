@@ -1,0 +1,22 @@
+footer {
+	position: fixed;
+	bottom: 0.8rem;
+	right: 0.8rem;
+	transform: translateX(60px);
+	animation: slideLeft 540ms ease-out;
+	animation-delay: 320ms;
+	animation-fill-mode: forwards;
+	max-width: 2000px;
+}
+
+@keyframes slideLeft {
+	0% { transform: translateX(60px); }
+	40% { transform: translateX(-2px); }
+	100% { transform: translateX(0); }
+}
+
+@media screen and (max-width: 648px) {
+	footer {
+		display: none;
+	}
+}

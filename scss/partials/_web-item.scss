@@ -1,0 +1,333 @@
+.web__items {
+	.work__container-animate {
+		transform: scale(0.22) translateY(-500px);
+		animation: none;
+	}
+
+	h3 {
+		display: none;
+	}
+
+	ul {
+		list-style: initial;
+		list-style-position: inside;
+	}
+
+	.nav__list {
+		background: linear-gradient(to bottom right, #4BC0C8, #C779D0, #FEAC5E) fixed;
+	}
+}
+
+.web__item-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 95%;
+	margin: 0 auto;
+	margin-top: 60px;
+	padding-bottom: 80px;
+	animation: workContainerTransformed 640ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+	ul li {
+		font-weight: 600;
+	}
+
+}
+
+.screen__wide {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+span {
+	font-weight: 700;
+}
+
+.centered {
+	text-align: center;
+}
+
+.monitor__web-item {
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+.web__item-header {
+	font-size: 1.4rem;
+}
+
+.award {
+	padding: .5rem 0 2rem 0;
+	text-align: center;
+	line-height: 1.2;
+}
+
+.web__item-par-heading {
+	font-size: 1.1rem;
+	padding-bottom: .4rem;
+}
+
+.web__item-expand {
+	color: $yellow;
+	padding-bottom: .6rem;
+}
+
+.web__item-monitor {
+	display: flex;
+	align-items: center;
+}
+
+.web__item-text {
+	font-weight: 300;
+
+	a {
+		color: $yellow;
+		font-weight: 700;
+		text-decoration: underline;
+	}
+}
+
+.arrow {
+	width: 32px;
+	transform: rotate(-90deg);
+	padding: .6rem;
+	cursor: pointer;
+}
+
+.arrow:nth-of-type(3) {
+	transform: rotate(90deg);
+}
+
+.web__item-subheading {
+	padding-bottom: 1rem;
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+.web__item-content {
+	padding-top: 1rem;
+	max-width: 800px;
+	line-height: 1.6;
+}
+
+.web__item-header, .web__item-expand, .arrow, {
+	opacity: 0;
+	animation: fade-in 500ms ease;
+	animation-fill-mode: forwards;
+}
+
+.guide__image {
+	max-width: 90%;
+	margin: 0 auto;
+	display: block;
+	padding: 1rem 0 1rem 0;
+}
+
+.workshop__photo {
+	max-width: 90%;
+	margin: 0 auto;
+	display: block;
+}
+
+@keyframes fade-in {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.web__item-content {
+	transform: translateY(1000px);
+	animation: slide-up 800ms ease;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+	0% { transform: translateY(1000px); }
+	100% { transform: translateY(0px); }
+}
+
+.blur {
+	filter: blur(5px);
+	transition: filter 100ms;
+	pointer-events: none;
+}
+
+.blur-extra {
+	filter: blur(25px);
+	transition: filter 100ms;
+	pointer-events: none;
+}
+
+.web__project-view {
+	position: absolute;
+	width: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 280px;
+	opacity: 1;
+	animation: 500ms view-piece;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.000, 0.645, 0.385, 1.245);
+}
+
+@keyframes view-piece {
+	0% { width: 360px; position: fixed; }
+	100% { width: 77vw; position: fixed; top: 12vh; box-shadow: 0px 0px 53px 9px rgba(0,0,0,0.75); }
+}
+
+.web__view-shrink {
+	animation: 400ms view-piece-shrink;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.000, 0.645, 0.385, 1.245);
+}
+
+@keyframes view-piece-shrink {
+	0% { visibility: visible; width: 77vw; position: fixed; top: 8vh; box-shadow: 0px 0px 53px 9px rgba(0,0,0,0.75); }
+	99% { visibility: visible; width: 360px; box-shadow: none; }
+	100% { visibility: hidden; }
+}
+
+.view__button {
+	background-image: url('../img/arrow.svg');
+	background-color: rgba(0,0,0,0);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: none;
+	width: 72px;
+	height: 80px;
+	position: fixed;
+	top: 45vh;
+	left: 3vw;
+	transform: translateX(-500px) rotate(-90deg);
+	cursor: pointer;
+	outline: none;
+	animation: 340ms btn-slide;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.000, 0.645, 0.385, 1.045);
+	animation-delay: 100ms;
+}
+
+.button__next {
+	background-image: url('../img/arrow.svg');
+	background-color: rgba(0,0,0,0);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: none;
+	width: 72px;
+	height: 80px;
+	position: fixed;
+	top: 45vh;
+	transform: rotate(90deg);
+	cursor: pointer;
+	outline: none;
+	left: auto;
+	right: 3vw;
+	transform: translateX(500px) rotate(90deg);
+	animation: 340ms btn-slide-next;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.000, 0.645, 0.385, 1.045);
+	animation-delay: 100ms;
+}
+
+@keyframes btn-slide {
+	0% { transform: translateX(-500px) rotate(-90deg); }
+	100% { transform: translateX(0px) rotate(-90deg); }
+}
+
+@keyframes btn-slide-next {
+	0% { transform: translateX(500px) rotate(90deg); }
+	100% { transform: translateX(0px) rotate(90deg); }
+}
+
+.close__icon {
+	background-image: url('../img/icon-close.svg');
+	background-color: rgba(0,0,0,0);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border: none;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	top: 3vh;
+	right: 3vw;
+	outline: none;
+	cursor: pointer;
+	animation: 240ms close-appear;
+	animation-timing-function: cubic-bezier(0.000, 0.645, 0.385, 1.045);
+	animation-fill-mode: forwards;
+	animation-delay: 200ms;
+	transform: scale(0);
+}
+
+@keyframes close-appear {
+	0% { transform: scale(0); }
+	70% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}
+
+@keyframes btn-slide-next {
+	0% { transform: translateX(500px) rotate(90deg); }
+	100% { transform: translateX(0px) rotate(90deg); }
+}
+
+@media screen and (min-width: 500px) {
+	.web__item-header {
+		font-size: 2rem;
+	}
+
+	.web__item-subheading {
+		font-size: 1.3rem;
+	}
+
+}
+
+@media screen and (min-width: 720px) {
+
+	.monitor__container {
+		flex-direction: row;
+	}
+
+	.web__monitor {
+		width: 80%;
+	}
+
+	.web__piece h2 {
+		font-size: 1rem;
+	}
+
+	.web__item-subheading {
+		font-size: 1.6rem;
+	}
+
+	.web__item-par-heading {
+		font-size: 1.4rem;
+	}
+
+}
+
+@media screen and (min-width: 1000px) {
+
+
+	.web__item-header {
+		font-size: 2.6rem;
+	}
+
+	.web__item-subheading {
+		font-size: 1.6rem;
+	}
+
+	.web__item-par-heading {
+		font-size: 1.4rem;
+	}
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head><% include ../global/head.ejs %></head>
+  <body class="work">
+  	<% include ../global/header.ejs %>
+        <div class="work__container">
+          <div class="mac-container work__piece">
+            <a class="work__piece-link" id="web-link" href="/my-work/web">
+              <div class="mac__device">
+                <div class="screen__border"></div>
+                <div class="screen__bottom"></div>
+                <div class="screen__stand"></div>
+              </div>
+            <span class="work__piece-span">Web</span></a>
+          </div>
+
+          <div class="iphone-container work__piece">
+           <a class="work__piece-link" href="/my-work/mobile">
+             <!-- <img src="img/iphone.png" alt="" class="iphone"> -->
+             <div class="phone__border">
+               <div class="phone__speaker"></div>
+               <div class="phone__speaker-wide"></div>
+                <div class="phone__screen"></div>
+                <div class="touch__id"></div>
+             </div>
+
+           <span class="work__piece-span">Mobile</span></a>
+          </div>
+
+          <div class="animation-container work__piece">
+            <a class="work__piece-link" href="/my-work/animations"><div class="animate-container">
+              <div class="left-bar"></div>
+              <div class="ball"></div>
+              <div class="right-bar"></div>
+            </div><span class="work__piece-span">Animations</span></a>
+        </div>
+      </div>
+    <% include ../global/scripts.ejs %>
+  </body>
+</html>
